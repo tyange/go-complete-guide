@@ -24,4 +24,10 @@ func main() {
 
 	var firstByte byte = 'a'
 	fmt.Println(firstByte)
+
+	firstName := "Yu"
+	lastName := "Tyange"
+
+	fmt.Println(firstName + " " + lastName)
+	// fmt.Println("9" +  1)
 }
