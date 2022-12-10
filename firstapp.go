@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/tyange/firstapp/greeting"
+)
 
 func main() {
 	// var greetingText string
@@ -8,9 +11,9 @@ func main() {
 
 	// var greetingText string = "Hello World"
 
-	greetingText := "Hello World"
+	// greetingText := "Hello World"
 
-	fmt.Println(greetingText)
+	fmt.Println(greeting.GreetingText)
 
 	var firstFloat64 float64 = 1.123123123123123123123
 	var firstFloat32 float32 = 1.123123123123123
