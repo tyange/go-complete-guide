@@ -18,4 +18,14 @@ func main() {
 
 	fmt.Println(*myAge)
 	fmt.Println(age)
+
+	doubledAge := double(myAge)
+	fmt.Println(doubledAge)
+	fmt.Println(age)
+}
+
+func double(number *int) int {
+	result := *number * 2
+	*number = 100
+	return result
 }
