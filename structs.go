@@ -28,7 +28,7 @@ func NewUser(fName string, lName string, bDate string) *User {
 	return &user
 }
 
-func outputUserDetails(user *User) {
+func (user *User) outputDetails() {
 	fmt.Printf("My name is %v %v (born on %v)", user.firstName, user.lastName, user.birthDate)
 }
 
@@ -43,7 +43,7 @@ func main() {
 
 	newUser = NewUser(firstName, lastName, birthdate)
 
-	outputUserDetails(newUser)
+	newUser.outputDetails()
 }
 
 func getUserData(promptText string) string {
