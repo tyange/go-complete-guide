@@ -28,18 +28,22 @@ func NewUser(fName string, lName string, bDate string) *User {
 	return &user
 }
 
+func outputUserDetails(user *User) {
+	fmt.Printf("My name is %v %v (born on %v)", user.firstName, user.lastName, user.birthDate)
+}
+
 var reader = bufio.NewReader(os.Stdin)
 
 func main() {
-	var newUser User
+	var newUser *User
 
 	firstName := getUserData("Please enter your first name: ")
 	lastName := getUserData("Please enter your last name: ")
 	birthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
 
-	newUser = *NewUser(firstName, lastName, birthdate)
+	newUser = NewUser(firstName, lastName, birthdate)
 
-	fmt.Println(newUser)
+	outputUserDetails(newUser)
 }
 
 func getUserData(promptText string) string {
