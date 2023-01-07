@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	var productNames [4]string
+	productNames = [4]string{"a Book"}
+	prices := [4]float64{10.99, 40.0, 12.99, 20.0}
+	fmt.Println(prices)
+
+	productNames[2] = "a Carpet"
+
+	fmt.Println(productNames)
+
+	fmt.Println(prices[2])
+}
