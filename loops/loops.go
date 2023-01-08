@@ -59,7 +59,7 @@ func calculateSumUptoNumber() {
 	fmt.Println(chosenNumber)
 	sum := 0
 
-	for i := 0; i < chosenNumber; i++ {
+	for i := 0; i <= chosenNumber; i++ {
 		sum = sum + i
 	}
 
@@ -67,11 +67,38 @@ func calculateSumUptoNumber() {
 }
 
 func calculateFactorial() {
+	fmt.Println("Please make your number")
+	chosenNumber, err := getInputNumber()
 
+	if err != nil {
+		fmt.Println("Invalid number input")
+		return
+	}
+
+	fmt.Println(chosenNumber)
+	factorial := 1
+
+	for i := 1; i <= chosenNumber; i++ {
+		factorial = factorial * i
+	}
+
+	fmt.Printf("Result: %v", factorial)
 }
 
 func calculateSumManually() {
+	isEnteringNumbers := true
+	sum := 0
 
+	fmt.Println("Keep on entering numbers, the program will quite once you enter any other value.")
+
+	for isEnteringNumbers {
+		chosenNumber, err := getInputNumber()
+		sum = sum + chosenNumber
+
+		isEnteringNumbers = err == nil
+	}
+
+	fmt.Printf("Result: %v\n", sum)
 }
 
 func calculateListSum() {
